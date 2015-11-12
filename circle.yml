@@ -1,9 +1,7 @@
 
 test:
   post:
-    - echo $CIRCLE_TEST_REPORTS
     - mkdir -p $CIRCLE_TEST_REPORTS/junit/
-    - touch $CIRCLE_TEST_REPORTS/junit/test_file
-    - find . -type f -regex ".*/target/failsafe-reports/.*xml" -exec echo {} \; -exec cp {} $CIRCLE_TEST_REPORTS/junit/ \; -exec cp {} $CIRCLE_ARTIFACTS \;
-    - find $CIRCLE_TEST_REPORTS -type f -regex "*" -exec echo {} \;
+    - find . -type f -regex ".*/target/failsafe-reports/.*xml" -exec echo {} \; -exec cp {} $CIRCLE_TEST_REPORTS/junit/ \;
+
 
