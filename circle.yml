@@ -1,7 +1,4 @@
-general:
-  build_dir: api
-  
-  
+
 test:
   post:
     - echo $CIRCLE_TEST_REPORTS
